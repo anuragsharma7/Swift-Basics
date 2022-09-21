@@ -20,34 +20,48 @@ var fixedNumberArray = Array(repeating: 6, count: 10)
 
 //if subjects.isEmpty { // we can also use count
 if subjects.count == 0 {
-    print("It's empty")
+//    print("It's empty")
+    "empty"
 } else {
     //print("It has the data")
+    "data"
 }
 
 //check if it is there or not
 if let last = subjects.last {
-    //print("Last element= \(last)")
+    last
 }
 
 if let firstElement = subjects.first {
     //print("This is first element = \(firstElement)")
+    firstElement
 }
 
 //You can access individual array elements through a subscript.
-print(subjects[0])
+//print(subjects[0])
 
 //Adding elements in an array
 subjects.append("Physics")
-//print(subjects)
+
 
 let newArray = ["Geography", "Arts"]
 subjects.append(contentsOf: newArray)
-//print(subjects)
 
 //insert(_:at:)
+subjects.insert("Swift", at: 0)
+
 //insert(contentsOf:at:)
+let newArrContent = ["Psycology", "Stress management"]
+subjects.insert(contentsOf: newArrContent, at: 0)
 
-subjects.inse
+//Remove element from an array
+//subjects.removeAll()
+subjects.remove(at: 0)
+//subjects.removeLast()
+//subjects.removeFirst()
+//subjects.removeSubrange(<#T##bounds: Range<Int>##Range<Int>#>)
 
-
+if let index = subjects.firstIndex(of: "Swift") {
+    print(index)
+    subjects[index] = "SwiftUI"
+}
