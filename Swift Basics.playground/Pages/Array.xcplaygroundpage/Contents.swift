@@ -20,7 +20,7 @@ var fixedNumberArray = Array(repeating: 6, count: 10)
 
 //if subjects.isEmpty { // we can also use count
 if subjects.count == 0 {
-//    print("It's empty")
+    //    print("It's empty")
     "empty"
 } else {
     //print("It has the data")
@@ -51,7 +51,7 @@ subjects.append(contentsOf: newArray)
 subjects.insert("Swift", at: 0)
 
 //insert(contentsOf:at:)
-let newArrContent = ["Psycology", "Stress management"]
+let newArrContent = ["Psychology", "Stress management"]
 subjects.insert(contentsOf: newArrContent, at: 0)
 
 //Remove element from an array
@@ -59,9 +59,43 @@ subjects.insert(contentsOf: newArrContent, at: 0)
 subjects.remove(at: 0)
 //subjects.removeLast()
 //subjects.removeFirst()
-//subjects.removeSubrange(<#T##bounds: Range<Int>##Range<Int>#>)
+subjects.removeSubrange(0...0)
 
 if let index = subjects.firstIndex(of: "Swift") {
     print(index)
     subjects[index] = "SwiftUI"
 }
+
+let index2 = subjects.firstIndex(of: "SwiftUI")
+let lastIndex = subjects.lastIndex(of: "SwiftUI")
+
+//print(index2, lastIndex)
+
+for value in subjects {
+    if let indexx = subjects.firstIndex(of: value) {
+        //print("Index of \(value) is \(indexx)")
+        indexx
+    }
+}
+
+subjects.forEach { valuuu in
+    if let indx = subjects.firstIndex(of: valuuu) {
+        indx
+    }
+}
+
+let newWay = Array(1...3)
+
+
+//Reserved capacity to make fast process
+
+var wholeNumbers = [Int]()
+wholeNumbers.reserveCapacity(500)
+
+for num in 0...500 {
+    wholeNumbers.append(num)
+}
+
+wholeNumbers.append(8)
+
+
