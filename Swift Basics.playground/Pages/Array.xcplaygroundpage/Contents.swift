@@ -1,7 +1,7 @@
 //import UIKit
 import Foundation
 
-
+/*
 var subjects = ["Maths", "English", "Punjabi", "Science", "Programming", "Finance"]
 var arr: Array<Int> = []
 var arr2: [Int] = []
@@ -97,5 +97,44 @@ for num in 0...500 {
 }
 
 wholeNumbers.append(8)
+*/
+
+var subjects = ["Maths", "English", "Punjabi", "Science", "Programming", "Finance"]
+print(subjects.count, subjects.capacity)
+ 
+ 
+var Unsigned = UInt8.min
+var signed = Int8.min
+
+var Unsigned2 = UInt8.max
+var signed2 = Int8.max
+
+
+let twoThousand: UInt16 = 2_000
+let one: UInt8 = 1
+let twoThousandAndOne = twoThousand + UInt16(one)
+
+
+typealias audioSample = UInt16
+print(audioSample.min)
+
+
+//Tuple
+let myInspiration = ("Ankur Warikoo", "Tanmay Bhatt", "Naval1", "Abdul Kalam", "Kunal Shah", "Hitesh chaudhary")
+print(myInspiration.4)
+/*
+func add(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+print(add(a: 5, b: 6))
+*/
+/*
+func returnError() -> (Int, String) {
+    return(404, "Page not found")
+}
+
+print(returnError().0)
+*/
 
 
