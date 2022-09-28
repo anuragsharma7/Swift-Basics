@@ -233,4 +233,59 @@ func makeASandwitch() throws {
 //}
 //
 
+//Assertion
+
+//If assert fails then it terminates the app
+
+//assert(<#T##() -> Bool#>, <#T##() -> String#>, file: <#T##StaticString#>, line: <#T##UInt#>)
+//assertionFailure(<#T##message: String##String#>)
+
+let age = 0
+//if age > 0 {
+//    print("you are eligible")
+//} else {
+//    assertionFailure("THE AGE is not eligible")
+//}
+
+// Precondition
+
+//must be true and false case both
+
+//if age != 18 {
+//    precondition(age != 0, "haha")
+//} else {
+//    preconditionFailure("it is failed")
+//}
+
+//in -ounchked mode, it doesnot check the preconditions
+//it will make them always true
+
+//in this case fatalError fxn will run anyhow
+
+//unary operator = work on single operand => !a
+//binary operator = work on 2 operands => a+b
+//ternary operator = work on 3 operands => a?b:c
+
+let (a,b) = (1,2)
+print(a,b)
+
+
+var num = 0
+for _ in 1...4 {
+    num += 1
+}
+print(num)
+
+//we can use comparison operator with tuples like this
+if (1,3) == (1,3) {
+    print(true)
+}
+
+//ternary Condition Operator
+
+let isGood = true
+let isNotGood = false
+
+print(1 > 0 ? isGood : isNotGood)
+
 
