@@ -217,3 +217,20 @@ if let isTrue = alwaysTrue {
     print(isTrue)
 }
 
+//Error handling
+func makeASandwitch() throws {
+    
+}
+//exmple
+//
+// do {
+//    try makeASandwich()
+//    eatASandwich()
+//} catch SandwichError.outOfCleanDishes {
+//    washDishes()
+//} catch SandwichError.missingIngredients(let ingredients) {
+//    buyGroceries(ingredients)
+//}
+//
+
+
