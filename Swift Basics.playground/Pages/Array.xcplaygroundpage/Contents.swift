@@ -122,6 +122,7 @@ print(audioSample.min)
 //Tuple
 let myInspiration = ("Ankur Warikoo", "Tanmay Bhatt", "Naval1", "Abdul Kalam", "Kunal Shah", "Hitesh chaudhary")
 print(myInspiration.4)
+
 /*
 func add(a: Int, b: Int) -> Int {
     return a + b
@@ -129,6 +130,7 @@ func add(a: Int, b: Int) -> Int {
 
 print(add(a: 5, b: 6))
 */
+
 /*
 func returnError() -> (Int, String) {
     return(404, "Page not found")
@@ -137,4 +139,81 @@ func returnError() -> (Int, String) {
 print(returnError().0)
 */
 
+/*
+let http404Error = (404, "Not Found")
+let (statusCode, statusMessage) = http404Error
+print(statusCode)
+print(statusMessage)
+
+let (justStatusCode, _) = http404Error
+print(justStatusCode)
+
+print(http404Error.0)
+print(http404Error.1)
+*/
+/*
+let error = (statusCode: 200, description: "ok")
+print(error.statusCode)
+
+
+var a: Int? = 5
+
+if (a != nil) {
+    print("not found")
+}
+
+var name: String = "Anurag"
+var rollNumber = Int(name)
+
+a = nil
+
+var defaultVal: String?
+defaultVal = nil
+
+
+if defaultVal != nil {
+    print("it contains a value")
+} else {
+    print("it is null")
+}
+*/
+var name: String?
+name = "Anurag"
+if let n = name {
+    print(n)
+} else {
+    print("name value not found")
+}
+
+if var na = name {
+    na = "new name"
+    print(na)
+}
+
+while name == "3" {
+    print("25")
+}
+
+if let bachi = name , let tinku = name {
+    print(bachi, tinku)
+}
+
+
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+ 
+
+if let f = Int("23"), let n = Int("22"), f > n && f != n {
+    print("hahhahahah")
+}
+
+var uidone = false
+
+var alwaysTrue: Bool! = true
+let anyBool: Bool = alwaysTrue
+
+if let isTrue = alwaysTrue {
+    print(isTrue)
+}
 
