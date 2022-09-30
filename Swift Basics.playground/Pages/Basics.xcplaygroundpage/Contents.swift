@@ -351,5 +351,21 @@ if myRange.contains(1) {
 //Logical OR (a || b)
 
 
+let allowedEntry = false
+if !allowedEntry {
+    print("ACCESS DENIED")
+}
+
+let entryPass = true
+if allowedEntry && entryPass {
+    print("Access approved, Andar a jao")
+}
+
+//Above example is not making the overall expression equate to true
+
+//Logical OR
+//Logical OR is infix operator
+
+//we can use OR of AND operator for creating a longer compound expression
 
 
