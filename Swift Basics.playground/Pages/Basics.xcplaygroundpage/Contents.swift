@@ -1,5 +1,6 @@
 //import UIKit
 import Foundation
+import Darwin
 
 /*
 var subjects = ["Maths", "English", "Punjabi", "Science", "Programming", "Finance"]
@@ -315,8 +316,40 @@ for j in bb {
 }
 
 for Anurag in 2022...2070 {
-    print(Anurag)
+    //print(Anurag)
 }
 
 //one sided range
+let names = ["Ankur Warikoo", "Tanmay Bhatt", "Naval", "Abdul Kalam", "Kunal Shah", "Hitesh chaudhary"]
+
+for name in names[2...] {
+    print(name)
+}
+
+/*
+ Naval
+ Abdul Kalam
+ Kunal Shah
+ Hitesh chaudhary
+ */
+
+for n in names [...2] {
+    print("\n\(n)")
+}
+
+let myRange = ...5
+//print(myRange)
+
+if myRange.contains(1) {
+    print("1 is there")
+}
+
+
+//Logical Operators
+//Logical NOT
+//Logical AND (a && b)
+//Logical OR (a || b)
+
+
+
 
