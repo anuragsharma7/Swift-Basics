@@ -286,6 +286,37 @@ if (1,3) == (1,3) {
 let isGood = true
 let isNotGood = false
 
-print(1 > 0 ? isGood : isNotGood)
+//print(1 > 0 ? isGood : isNotGood)
 
+let contentHeight = 40
+let hasHeader = true
+let rowHeight = contentHeight + (hasHeader ? 50 : 20)
+print(rowHeight)
+
+//nil-coalescing operator
+//a ?? b
+
+//a !=nil ? a! : b
+
+//Range Operator
+//close range operator
+let aa = (1...4)
+print(a)
+
+for i in aa {
+    print("index is \(i)")
+}
+
+//half range operator
+let bb = 1..<5
+print(bb)
+for j in bb {
+    print(j)
+}
+
+for Anurag in 2022...2070 {
+    print(Anurag)
+}
+
+//one sided range
 
