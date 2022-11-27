@@ -1,6 +1,7 @@
 
 
 import Foundation
+
 /*
 
 var greeting = "Hello, playground"
@@ -93,11 +94,76 @@ var myName = "Anurag"
 
 //print(myName[myName.endIndex]) //error
 
-for index in myName.indices{
-    print(index)
+//for index in myName.indices{
+//    print(index)
+//}
+//
+//myName.insert("!", at: myName.endIndex)
+//print(myName[myName.index(before: myName.endIndex)])
+//
+//myName.remove(at: myName.index(before: myName.endIndex))
+//
+//
+//let range = myName.index(myName.endIndex, offsetBy: -5)..<myName.endIndex
+//myName.removeSubrange(range)
+//
+//
+//let a = "ab"
+//let b = "b"
+//
+//if a == b {
+//    print("true")
+//}
+//
+//if a.hasPrefix("a") {
+//    print("a is there")
+//}
+//
+//if a.hasSuffix("a") {
+//    print("a is not there")
+//}
+
+//for codeUnit in myName.utf8 {
+//    print("\(codeUnit) ", terminator: "")
+//}
+//print("\n")
+//for codeUnit in myName.utf16 {
+//
+//    print("\(codeUnit) ", terminator: "")
+//}
+//print("\n")
+//for codeUnit in myName.unicodeScalars {
+//
+//    print("\(codeUnit) ", terminator: "")
+//}
+
+var rollNum = Array(repeating: 0, count: 10)
+
+var abc: Set<String> = ["a", "b", "c", "d"]
+var def = Set<Int>()
+def.insert(1)
+print(abc, def)
+
+if let isRemoved = abc.remove("a") {
+    print(isRemoved)
 }
 
+print(abc.sorted())
 
-myName.insert("!", at: myName.endIndex)
-print(myName[myName.endIndex])
+var a: Set<Int> = [1,2,3,4,5] //whole
+var b: Set<Int> = [2,4] //even
+
+let intersect = a.intersection(b)
+//print(intersect)
+//print(a)
+//print(b)
+
+let symm = a.symmetricDifference(b)
+let union = a.union(b)
+let subtracting = a.subtracting(b)
+
+if symm.isSubset(of: union) {
+    print(true)
+}
+
 
