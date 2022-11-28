@@ -166,4 +166,51 @@ if symm.isSubset(of: union) {
     print(true)
 }
 
+symm.isSuperset(of: union)
+union.isSuperset(of: symm)
+symm.isStrictSubset(of: union)
 
+var myDicto = [Int: String]()
+var myDicto2: [Int: String]
+
+var d3: [String: String] = [:]
+d3 = [
+    "YYZ": "Toronto Pearson",
+    "DUB": "Dublin"
+]
+
+d3.isEmpty
+d3.debugDescription
+d3.count
+d3.description
+d3.keys
+d3.values
+d3["YYZ"]
+d3.updateValue("INDIA", forKey: "YYZ")
+d3
+
+if let airportName = d3["YYZ"] {
+    print("hai \(airportName)")
+} else {
+    print("nahi hai")
+}
+    
+//d3["YYZ"] = nil
+d3
+d3.count
+
+for (airportCode, airportName) in d3 {
+    print("\(airportCode): \(airportName)")
+}
+ 
+for airportCode in d3.keys {
+    print("Airport code: \(airportCode)")
+}
+
+for airportName in d3.values {
+    print("Airport name: \(airportName)")
+}
+
+let airportCodes = [String](d3.keys)
+
+let airportNames = [String](d3.values)
