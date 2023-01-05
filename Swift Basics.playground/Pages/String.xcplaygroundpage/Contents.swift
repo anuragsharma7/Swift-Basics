@@ -1,6 +1,7 @@
 
 
 import Foundation
+import Darwin
 
 /*
 
@@ -214,3 +215,343 @@ for airportName in d3.values {
 let airportCodes = [String](d3.keys)
 
 let airportNames = [String](d3.values)
+
+//control flow
+//While, if , guard, switch,
+//to transfer the flow of execution to another point in your code (break and continue)
+
+
+for i in 1..<5 {
+    i
+}
+
+d3
+for (key , value) in d3 {
+    print(key)
+    print(value)
+}
+
+for _ in d3 {
+    print("a")
+}
+
+for i in 1...5 {
+    print(i)
+}
+
+for i in 0..<10 {
+    i
+}
+
+//new
+let minutes = 60
+let interval = 5
+for i in stride(from: 0, to: minutes, by: interval) {
+    i
+}
+
+//while 2>1 {
+//    //print("a")
+//}
+
+let finalSquare = 25
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+//repeat {
+//    print("Don no. 1")
+//} while 0<1
+
+let i = 1
+switch i {
+case 0 :
+    print(i)
+case 0...3:
+    print("range me bhi agaye")
+default:
+    print("nothing")
+}
+
+
+let anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+case "a", "A":
+    print("The letter A")
+default:
+    print("Not the letter A")
+}
+ 
+let somePoint = (0,0)
+switch somePoint {
+case (let x, 0): //value binding
+    print("00 hai \(x)")
+case (_, 0):
+    print("x nahi hai y 0 hai")
+default:
+    print("kuch ni")
+}
+
+let atoz = (1, -1)
+switch atoz {
+case let (x, y) where x == y :
+    print("equal nahi hai")
+case let (x, y) where x == -y:
+    print("equal hai")
+    
+default:
+    print("default")
+    
+}
+
+let stillAnotherPoint = (9, 0)
+
+switch stillAnotherPoint {
+case (let distance, 0), (0, let distance):
+    print("on an axis ")
+    
+default: break
+    
+}
+
+//control transfer statements
+
+//continue - go to the next index
+//break - ends the loop
+//fallthrough -
+//return
+//throw
+
+let puzzleInput = "great minds think alike"
+var puzzleOutput = ""
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+for character in puzzleInput {
+    if charactersToRemove.contains(character) {
+        
+        
+    }
+    puzzleOutput.append(character)
+}
+print(puzzleOutput)
+
+
+let integerToDescribe = 5
+var description = "The number \(integerToDescribe) is"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " a prime number, and also"
+    fallthrough
+default:
+    description += " an integer."
+}
+print(description)
+// Prints "The number 5 is a prime number, and also an integer.”
+ 
+
+//labeled statement
+
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+
+func greet(person: [String: String]) {
+    guard let name = person["name"] else {
+        return
+    }
+
+    print("Hello \(name)!")
+
+    guard let location = person["location"] else {
+        print("I hope the weather is nice near you.")
+        return
+    }
+
+    print("I hope the weather is nice in \(location).")
+}
+
+let p = ["name": "Anurag", "location": "Chandigarh"]
+greet(person: p)
+
+
+if #available(iOS 10, macOS 10.12, *) {
+    // Use iOS 10 APIs on iOS, and use macOS 10.12 APIs on macOS
+    print("1")
+} else {
+    // Fall back to earlier iOS and macOS APIs
+    print("2")
+}
+
+func greet(person: String) -> String {
+    let greeting = "Hello, " + person + "!"
+    return greeting
+}
+
+func nameFinder() -> String {
+    return "Anurag" + "Sharma"
+}
+
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+func myMarks(_ a: inout Int, _ b: inout Int) {
+    print(a + b)
+}
+
+var a1 = 2
+var a2 = 10
+
+myMarks(&a1, &a2)
+
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+
+addTwoInts(3, 4)
+
+//function type
+//() -> Void
+
+
+var myFunction: () -> Void
+
+var mathFunction: (Int, Int) -> Int = addTwoInts
+
+print(mathFunction(2, 2))
+
+func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print("Result: \(mathFunction(a, b))")
+}
+
+
+
+//
+
+
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    func stepForward(_ input: Int) -> Int {
+        return input + 1
+    }
+    func stepBackward(_ input: Int) -> Int {
+        return input - 1
+    }
+
+    return backward ? stepBackward : stepForward
+}
+
+
+var currentValue = 3
+let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
+
+
+print("Counting to zero:")
+// Counting to zero:
+while currentValue != 0 {
+    print("\(currentValue)... ")
+    currentValue = moveNearerToZero(currentValue)
+}
+print("zero!")
+// 3...
+// 2...
+// 1...
+// zero!
+
+var names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+//names.sorted(by: T##(String, String) throws -> Bool)
+
+
+func backward(_ s1: String, _ s2: String) -> Bool {
+    return s1 > s2
+}
+
+names.sort()
+
+
+
+//func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+//    var runningTotal = 0
+//    func incrementer() -> Int {
+//        runningTotal += amount
+//        return runningTotal
+//    }
+//    return incrementer
+//}
+//
+//let aa = makeIncrementer(forIncrement: 10)
+//
+//aa()
+//aa()
+//aa()
+
+func wakeMeUp() -> (String) -> Void { 
+    
+    var counter = 1
+    return {
+        print("this is a num: \(counter), and this is \($0)")
+        counter += 1
+    }
+}
+
+let uthjaBhai = wakeMeUp()
+uthjaBhai("hi")
+uthjaBhai("hi")
+uthjaBhai("hi")
+
+let uthjaBhaia = wakeMeUp()
+
+uthjaBhaia("hia")
+uthjaBhaia("hia")
+uthjaBhaia("hia")
+
+uthjaBhai("hi")
+
+
+var completionHandlers: [() -> Void] = []
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+}
+
+
+var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+print(customersInLine.count)
+// Prints "5"
+
+let customerProvider = { customersInLine.remove(at: 0) }
+print(customersInLine.count)
+// Prints "5"
+
+print("Now serving \(customerProvider())!")
+// Prints "Now serving Chris!"
+
+print(customersInLine.count)
+// Prints "4”
+ 
+
+
+
+
+// customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
+func serve(customer customerProvider: () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+serve(customer: {
+    customersInLine.remove(at: 0)
+} )
+// Prints "Now serving Alex!”
+
+
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+
+let possiblePlanet = Planet(rawValue: 7)
+
+// Recursive enum
+
+enum ArithmeticExpression {
+    case number(Int)
+    indirect case addition(ArithmeticExpression, ArithmeticExpression)
+    indirect case multiplication(ArithmeticExpression, ArithmeticExpression)
+}
